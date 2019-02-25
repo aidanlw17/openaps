@@ -84,12 +84,12 @@ apt-get -o Acquire::ForceIPv4=true install -y sudo
 sudo apt-get remove npm
 sudo apt-get remove nodejs-legacy
 sudo apt-get remove nodejs
-sudo rm /usr/bin/node
 sudo apt-get install curl software-properties-common
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt-get install nodejs
 
 #End my input
+#node npm removed from second sudo apt-get
 sudo apt-get -o Acquire::ForceIPv4=true update && sudo apt-get -o Acquire::ForceIPv4=true -y upgrade
 sudo apt-get -o Acquire::ForceIPv4=true install -y git python python-dev software-properties-common python-numpy python-pip watchdog strace tcpdump screen acpid vim locate jq lm-sensors && \
 #if getent passwd edison > /dev/null; then sudo apt-get -o Acquire::ForceIPv4=true install -y nodejs-legacy; fi && \
